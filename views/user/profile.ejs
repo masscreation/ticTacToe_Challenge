@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Profile</title>
+		<link rel="stylesheet" a href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	</head>
+	<body>
+	<div class="container">
+		<!-- Logout button --> 
+		<div class="row"> <!-- Row 1 -->
+			<div class="col-md-10">	
+			</div>
+			<div class="col-md-2">
+				<form method="POST" action="logout?_method=DELETE">
+					<button>Logout</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="row"> <!-- Row 2 -->
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h1>Hello <%= user.email %></h1>
+				<h3>Create a new game</h3>
+				<!-- Create Game form -->
+				
+				<form action="/games" method="POST">
+					<input type="integer" name="amount" placeholder="Bitcoin Amount">
+					<select name="challenged" >
+					<option value="">Challenge a peer</option>
+					<% users.forEach(function(user) { %>
+					<option value="<%= user.id %>"><%= user.email %></option>
+					<% }); %>
+					</select>
+					<button>Create Game</button>
+				</form>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div> <!-- Close container --> 
+	</body>
+
+	
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- // <script src='objOrientedTicTacToe.js'></script> -->
+    <link href="style.css" rel="stylesheet">
+   <script src="objOrientedTicTacToe.js"></script>
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          Challenger: <%= game.challengerId %> 
+        </div>
+         <div class="col-md-6">
+          Challenger: <%= game.challengedId %> 
+        </div>
+      </div>
+      <div class="row">
+        <div id='game'> 
+          <div id='board'>
+            <!-- the `&nbsp;` in each div is a non-breakable space.
+                 It prevents the div from collapsing. -->
+            <div class='box'>&nbsp;</div>
+            <div class='box'>&nbsp;</div>
+            <div class='box'>&nbsp;</div>
+            <div class='box'>&nbsp;</div>
+            <div class='box'>&nbsp;</div>
+            <div class='box'>&nbsp;</div>
+            <div class='box'>&nbsp;</div>
+            <div class='box'>&nbsp;</div>
+            <div class='box'>&nbsp;</div>
+          </div>
+          <div>
+            <button id="reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -19,19 +19,16 @@ module.exports = function(sequelize, DataTypes) {
     }
   },
   /** End of Attributes **/{
-        instanceMethods: {
+    instanceMethods: {
       // these run on a particular user e.g. an instance
       checkPassword: function(password) {
         return bcrypt.compareSync(password, this.passwordDigest);
-      },
-      addToFaves: function(db,imdbID,rating) {
-        db.FavoriteMovie
-          .create({imdbID: imdbiD, rating: rating, UserId: this.id})
       }
     },
     classMethods: {
       associate: function(models) {
-        this.hasMany(models.FavoriteMovie); 
+        // this.hasMany(models.Game, {as: "challenger", through: models.Game} )
+        // this.hasMany(models.Game, {as: "challenged", through: models.Game} )
       },
       //this is a helper method for createSecure
       encryptPassword: function(password) {

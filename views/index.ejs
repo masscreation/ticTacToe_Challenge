@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+		<title>Tic Tac Toe Challenge</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-8">
+					<h1>Welcome to Tic Tac Toe Challenge</h1>
+					<p>
+						Challenge other players in a friendly game of Tic Tac Toe.
+						For Bitcoin or bragging rights.
+					</p>
+					<h2>Sign up</h2>
+					<form method="POST" action="/signup">
+						<input type="text" name="email" placeholder="Email"><br>
+						<input type="password" name="password" placeholder="Password"><br>
+						<button>Signup!</button>
+					</form>
+				</div>
+
+				<div class="col-xs-6 col-md-4 loginForm">
+					<p>Already have an account?</p>
+					<h3>Login</h3>
+					<form method="POST" action="/login">
+						<input type="text" name="email" placeholder="Email"><br>
+						<input type="password" name="password" placeholder="Password"><br>
+						<button>Login</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
